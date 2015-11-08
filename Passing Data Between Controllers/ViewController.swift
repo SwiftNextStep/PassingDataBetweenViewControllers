@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var cell = String()
+    var sub = String()
+    
+    @IBOutlet weak var cellLabel: UILabel!
+    @IBOutlet weak var subLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        cellLabel.text = cell
+        subLabel.text = sub
     }
 
     override func didReceiveMemoryWarning() {
