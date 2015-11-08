@@ -129,9 +129,6 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="detailsSegue" id="U6D-8R-XIx"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="plu-Yc-GvI" detailTextLabel="pmH-NC-z3D" style="IBUITableViewCellStyleSubtitle" id="izG-AR-2ht">
                                         <rect key="frame" x="0.0" y="143" width="600" height="44"/>
@@ -160,9 +157,6 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="detailsSegue" id="N9b-4v-zbf"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -173,6 +167,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Passing Data Between Controllers" id="4ke-xg-WBf"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="detailsSegue" id="mLp-4l-ybw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYW-VA-JhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,7 +195,4 @@
             <point key="canvasLocation" x="140" y="700"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="U6D-8R-XIx"/>
-    </inferredMetricsTieBreakers>
 </document>

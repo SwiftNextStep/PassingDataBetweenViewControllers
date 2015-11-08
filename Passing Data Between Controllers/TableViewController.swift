@@ -15,16 +15,21 @@ class TableViewController: UITableViewController {
 
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell
+        performSegueWithIdentifier("detailsSegue", sender: currentCell)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "detailsSegue")
         {
             let detailVC = segue.destinationViewController as! ViewController
-            let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
-            let currentCell = tableView.cellForRowAtIndexPath(indexPath!)! as UITableViewCell
-            
-            print("Passing data:\(currentCell.textLabel!.text)")
-            detailVC.cell = currentCell.textLabel!.text!
-            detailVC.sub = (currentCell.detailTextLabel?.text)!
+            if let currentCell = sender as? UITableViewCell{
+                
+                print("Passing data:\(currentCell.textLabel!.text)")
+                detailVC.cell = currentCell.textLabel!.text!
+                detailVC.sub = (currentCell.detailTextLabel?.text)!
+            }
         }
     }
 
